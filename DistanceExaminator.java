@@ -9,7 +9,9 @@ public class DistanceExaminator {
     private ArrayList<Student> students = new ArrayList<Student>();
     private ArrayList<Question> questions = new ArrayList<Question>();
     private int curreantUser = -2;
-
+    public int getCurreantUser(){
+        return curreantUser;
+    }
     public void addUser(String name, String login, String password, String repeatPassword) throws Exception{
         if (password.compareTo(repeatPassword) != 0) throw new Exception("Пароли не совпадают");
         if (login.compareTo(admin.getLogin()) == 0) throw new Exception("Данный логин уде занят");
